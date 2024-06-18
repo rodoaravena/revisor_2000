@@ -1,0 +1,26 @@
+<p>Revisor 2000</p>
+<div>
+  <input
+    type="file"
+    class="file-input"
+    (change)="onFileSelected($event)"
+    #fileUpload
+  />
+
+  <div class="file-upload">
+    {{ fileName || "No file uploaded yet." }}
+
+    <button
+      mat-mini-fab
+      color="primary"
+      class="upload-btn"
+      (click)="fileUpload.click()"
+    >
+    <i-tabler
+      class="paperclip"
+      name="paperclip"
+      matListItemIcon
+    ></i-tabler>
+    </button>
+  </div>
+</div>
